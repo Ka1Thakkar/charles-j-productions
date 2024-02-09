@@ -47,7 +47,7 @@ const WeddingsElement = () => {
         <div className="flex flex-col gap-10 justify-center items-center pt-10">
             {weddings.map((element, key) => {
                 return (
-                    <Image key={key} src={element.image} alt="wedding image" />
+                    <Image priority placeholder='blur' key={key} src={element.image} alt="wedding image" />
                 )
             })}
         </div>
@@ -60,7 +60,7 @@ const CommercialsElement = () => {
             {commercials.map((element, key) => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
-                        <Image key={key} src={element.image} alt="wedding image" className="" />
+                        <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className="" />
                         <div className="absolute bottom-0 flex w-full justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent py-5">
                             <p className="text-xl font-bold">
                                 Title
@@ -82,7 +82,7 @@ const MusicVideosElement = () => {
             {musicVideos.map((element, key) => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
-                        <Image key={key} src={element.image} alt="wedding image" className="" />
+                        <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className="" />
                         <div className="absolute bottom-0 flex w-full justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent py-5">
                             <p className="text-xl font-bold">
                                 Title
