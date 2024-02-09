@@ -12,7 +12,7 @@ const subheadingFont = localFont({src : '../../public/Fonts/Satoshi-Font/Satoshi
 const Portfolio = () => {
     return (
         <div className={subheadingFont.className + " text-[#FFD504] min-h-screen py-20 w-full flex flex-col gap-10"}>
-            <h1 className="font-bold text-4xl px-10 md:px-32">Portfolio Overview</h1>
+            <h1 className="font-black text-4xl px-10 md:px-32">Portfolio Overview</h1>
             <div className="flex flex-col gap-10 w-full justify-center items-center px-10 md:px-32">
                 <PortfolioComponent image={image1} />
                 <PortfolioComponent image={image2} />

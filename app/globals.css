@@ -6,6 +6,15 @@ body {
   background-color: #191416;
 }
 
+::-webkit-scrollbar {
+  background-color: #191416;
+  width: 7.5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFD504;
+  border-radius: 20px;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Categories from "./_components/Categories";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import Navbar from "../_components/Navbar";
 
 const headingFont = localFont({src : '../../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
 
@@ -22,6 +23,7 @@ const Portfolio = () => {
     })
     return (
         <main>
+            <Navbar />
             <Categories />
             <Footer />
         </main>

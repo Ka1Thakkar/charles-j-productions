@@ -15,7 +15,7 @@ const Categories = () => {
     const portfolioState = usePortfolioState()
     return (
         <div className="min-h-screen flex flex-col py-40 px-10 md:px-32 gap-20">
-            <h1 className={headingFont.className + " uppercase text-8xl text-[#FFD504] font-medium"}>
+            <h1 className={headingFont.className + " text-8xl text-[#FFD504] font-medium"}>
                 Portfolio
             </h1>
             <div className={subheadingFont.className + " text-[#FFD504]"}>
@@ -36,6 +36,7 @@ const Categories = () => {
                 <TabsContent value="Music Videos"><MusicVideosElement /></TabsContent>
                 </Tabs>
             </div>
+            {/* <Form /> */}
         </div>
     );
 }
@@ -61,7 +62,7 @@ const CommercialsElement = () => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
                         <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className="" />
-                        <div className="absolute bottom-0 flex w-full justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent py-5">
+                        <div className="absolute bottom-0 flex w-full justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[50%] items-end py-5">
                             <p className="text-xl font-bold">
                                 Title
                             </p>
@@ -83,7 +84,7 @@ const MusicVideosElement = () => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
                         <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className="" />
-                        <div className="absolute bottom-0 flex w-full justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent py-5">
+                        <div className="absolute bottom-0 flex w-full justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[50%] items-end py-5">
                             <p className="text-xl font-bold">
                                 Title
                             </p>

@@ -7,25 +7,35 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import localFont from "next/font/local";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { MotionValue, useTransform, motion, useMotionValue } from "framer-motion";
 
 const headingFont = localFont({src : '../../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
 
 const subheadingFont = localFont({src : '../../public/Fonts/Satoshi-Font/Satoshi-Variable.woff2'})
 
-const Navbar = () => {
+interface NavbarProps {
+    progress ?: MotionValue
+}
+
+const Navbar = ({progress} : NavbarProps) => {
     const router = useRouter()
+    let opacity = useMotionValue(1)
+    if (progress !== undefined) {
+        opacity = useTransform(progress, [0,0.1], [0,1])
+    }
     return (
-        <nav className={subheadingFont.className + " fixed top-0 z-[9999] bg-[#191416] w-full flex justify-between px-10 py-2 text-[#FFD504]"}>
-            <div role="button" onClick={() => router.push('/')} className="w-fit">
+        <motion.nav className={subheadingFont.className + " fixed top-0 z-20 w-full text-[#FFD504] flex justify-between py-2"}>
+            <motion.div style={{opacity: opacity}} className="absolute w-full h-full bg-[#191416] top-0"></motion.div>
+            <div role="button" onClick={() => router.push('/')} className="w-fit z-50 pl-10">
                 <Image src={logo} alt="logo" className=" object-contain h-[75px] w-fit" />
             </div>
-            <div className="md:flex items-center gap-5 font-bold hidden">
+            <div className="md:flex items-center gap-5 font-bold hidden pr-10 z-50">
                 <Link href={'/portfolio'}><p className=" uppercase">portfolio</p></Link>
                 <p className=" uppercase">testimonials/ clients</p>
-                <p className=" uppercase">Get in Touch</p>
+                <Link href={'/quote'}><p className=" uppercase">Get in Touch</p></Link>
                 <p className=" uppercase">Book us</p>
             </div>
-        </nav>
+        </motion.nav>
     );
 }
 

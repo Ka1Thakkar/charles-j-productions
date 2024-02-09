@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="w-full h-full absolute flex items-center justify-center">
                 <Image src={footerLogo} alt="Footer Logo" className="h-[50vh] object-contain opacity-[2.5%]" />
             </div>
-            <h1 className={" uppercase text-6xl font-bold px-10 md:px-32 pb-10"}>Let's <span className={headingFont.className + ' font-medium text-7xl'}>work</span> together</h1>
+            <h1 className={headingFont.className + " text-8xl font-medium px-10 md:px-32 pb-10"}>Let's work together</h1>
             <div className="flex flex-col xl:flex-row px-10 md:px-32 z-30 gap-20 pb-20">
                 <div className="xl:w-1/2 flex flex-col gap-10">
                     <p className="text-white text-3xl font-light">
@@ -74,7 +74,7 @@ const navigation = [
         subMenu : ['Weddings',' Commercials', 'Music Videos'],
     },
     {
-        main : 'Testimonials/ Client',
+        main : 'Testimonials',
         subMenu : ['Weddings',' Commercials', 'Music Videos'],
     },
     {
