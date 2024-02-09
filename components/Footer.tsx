@@ -1,7 +1,11 @@
+'use client'
+
 import Image from "next/image";
 import footerLogo from '@/public/aassets/Yellow PNG (2).png'
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import localFont from "next/font/local";
+import { usePortfolioState } from "@/hooks/portfolio-state";
+import { useRouter } from "next/navigation";
 
 const headingFont = localFont({src : '../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
 
@@ -11,7 +15,7 @@ const Footer = () => {
     return (
         <div className={subheadingFont.className + " relative min-h-screen flex flex-col py-20 justify-center text-[#FFD504]"}>
             <div className="w-full h-full absolute flex items-center justify-center">
-                <Image src={footerLogo} alt="Footer Logo" className="h-[50vh] object-contain opacity-5" />
+                <Image src={footerLogo} alt="Footer Logo" className="h-[50vh] object-contain opacity-[2.5%]" />
             </div>
             <h1 className={" uppercase text-6xl font-bold px-10 md:px-32 pb-10"}>Let's <span className={headingFont.className + ' font-medium text-7xl'}>work</span> together</h1>
             <div className="flex flex-col xl:flex-row px-10 md:px-32 z-30 gap-20 pb-20">
@@ -40,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="flex xl:flex-row flex-col-reverse gap-y-10 px-10 md:px-32 justify-between z-20 gap-x-32">
-                <div className="xl:flex grid grid-cols-2 justify-between gap-y-10 xl:w-8/12">
+                <div className="xl:flex grid grid-cols-2 justify-between gap-y-10 xl:w-8/12 items-center">
                     {navigation.map((menu, i) => {
                         return (
                             <NavigationElement key={i} id={i} />
@@ -67,19 +71,19 @@ export default Footer;
 const navigation = [
     {
         main : 'Portfolio',
-        subMenu : ['Wedding',' Commercials', 'Music Videos'],
+        subMenu : ['Weddings',' Commercials', 'Music Videos'],
     },
     {
-        main : 'Testimonials',
-        subMenu : ['Wedding',' Commercials', 'Music Videos'],
+        main : 'Testimonials/ Client',
+        subMenu : ['Weddings',' Commercials', 'Music Videos'],
     },
     {
         main : 'Get in Touch',
-        subMenu : ['Wedding',' Commercials', 'Music Videos'],
+        subMenu : ['Weddings',' Commercials', 'Music Videos'],
     },
     {
         main : 'Book Us',
-        subMenu : ['Wedding',' Commercials', 'Music Videos'],
+        subMenu : ['Weddings',' Commercials', 'Music Videos'],
     },
 ]
 
@@ -88,19 +92,38 @@ interface NavigationElementProps {
 }
 
 const NavigationElement = ({id} : NavigationElementProps) => {
+    const router = useRouter()
+    const portfolioState = usePortfolioState()
+    const onClick = (menu : string) => {
+        portfolioState.setValue(menu)
+        router.push('/portfolio')
+        console.log(portfolioState.value)
+    }
     return (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-2">
             <h2 className="font-bold text-xl">{navigation[id].main}</h2>
             <div className="h-[1px] w-full bg-[#FFD504] rounded-full"></div>
-            <div className="flex flex-col gap-5">
+            {/* <div className="flex flex-col gap-5">
+                {navigation[id].subMenu.map((menu, key) => {
+                    if (navigation[id].main === 'portfolio') {return (
+                        <div key={key} onClick={() => portfolioState.setValue(menu)} className="font-light">
+                            {menu}
+                        </div>
+                    )}
+                })}
+            </div> */}
+            {/* {navigation[id].main === 'Portfolio' ? (
+                <div className="flex flex-col gap-5">
                 {navigation[id].subMenu.map((menu, key) => {
                     return (
-                        <p className="font-light">
-                            {menu}
-                        </p>
-                    )
+                    <div key={key} role="button" onClick={() => onClick(menu)} className="font-light">
+                        {menu}
+                    </div>)
                 })}
             </div>
+            ) : (
+                <div className="hidden"></div>
+            )} */}
         </div>
     );
 }
