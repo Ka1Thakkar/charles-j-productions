@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import footerLogo from '@/public/aassets/Yellow PNG (2).png'
+import footerLogo from '@/public/aassets/website link.png'
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import localFont from "next/font/local";
 import { usePortfolioState } from "@/hooks/portfolio-state";
@@ -13,9 +13,9 @@ const subheadingFont = localFont({src : '../public/Fonts/Satoshi-Font/Satoshi-Va
 
 const Footer = () => {
     return (
-        <div className={subheadingFont.className + " relative min-h-screen flex flex-col py-20 justify-center text-[#FFD504]"}>
-            <div className="w-full h-full absolute flex items-center justify-center">
-                <Image src={footerLogo} alt="Footer Logo" className="h-[50vh] object-contain opacity-[2.5%]" />
+        <div className={subheadingFont.className + " relative min-h-screen flex flex-col py-40 justify-center text-[#FFD504]"}>
+            <div className="w-full h-fit bottom-0 absolute flex items-center justify-center">
+                <Image src={footerLogo} alt="Footer Logo" className="h-[15vh] object-contain opacity-[20%]" />
             </div>
             <h1 className={headingFont.className + " text-8xl font-medium px-10 md:px-32 pb-10"}>Let's work together</h1>
             <div className="flex flex-col xl:flex-row px-10 md:px-32 z-30 gap-20 pb-20">

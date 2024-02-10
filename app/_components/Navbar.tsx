@@ -24,14 +24,16 @@ const Navbar = ({progress} : NavbarProps) => {
         opacity = useTransform(progress, [0,0.1], [0,1])
     }
     return (
-        <motion.nav className={subheadingFont.className + " fixed top-0 z-20 w-full text-[#FFD504] flex justify-between py-2"}>
+        <motion.nav className={subheadingFont.className + " fixed top-0 z-[999] w-full text-[#FFD504] flex justify-between py-2 overflow-hidden"}>
             <motion.div style={{opacity: opacity}} className="absolute w-full h-full bg-[#191416] top-0"></motion.div>
-            <div role="button" onClick={() => router.push('/')} className="w-fit z-50 pl-10">
-                <Image src={logo} alt="logo" className=" object-contain h-[75px] w-fit" />
+            <div role="button" onClick={() => router.push('/')} className="w-fit z-50 pl-5 md:pl-10">
+                <video autoPlay muted preload="none" loop height={'100px'}  className=" object-contain h-[50px] md:h-[60px] w-fit">
+                    <source type='video/mp4' src={'/aassets/Rotating Website Logo.mp4'}></source>
+                </video>
             </div>
             <div className="md:flex items-center gap-5 font-bold hidden pr-10 z-50">
                 <Link href={'/portfolio'}><p className=" uppercase">portfolio</p></Link>
-                <p className=" uppercase">testimonials/ clients</p>
+                <Link href={'/testimonials'}><p className=" uppercase">testimonials/ clients</p></Link>
                 <Link href={'/quote'}><p className=" uppercase">Get in Touch</p></Link>
                 <p className=" uppercase">Book us</p>
             </div>
