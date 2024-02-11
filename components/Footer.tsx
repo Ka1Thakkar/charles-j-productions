@@ -6,6 +6,7 @@ import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import localFont from "next/font/local";
 import { usePortfolioState } from "@/hooks/portfolio-state";
 import { useRouter } from "next/navigation";
+import { link } from "fs";
 
 const headingFont = localFont({src : '../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
 
@@ -13,7 +14,7 @@ const subheadingFont = localFont({src : '../public/Fonts/Satoshi-Font/Satoshi-Va
 
 const Footer = () => {
     return (
-        <div className={subheadingFont.className + " relative min-h-screen flex flex-col py-40 justify-center text-[#FFD504]"}>
+        <div className={subheadingFont.className + " relative min-h-screen flex flex-col py-40 justify-center text-[#FFE812]"}>
             <div className="w-full h-fit bottom-0 absolute flex items-center justify-center">
                 <Image src={footerLogo} alt="Footer Logo" className="h-[15vh] object-contain opacity-[20%]" />
             </div>
@@ -38,9 +39,9 @@ const Footer = () => {
                 </div>
                 <div className="xl:w-1/2 flex flex-col gap-10">
                     <h2 className="text-3xl">Send Us a Message</h2>
-                    <input type='text' placeholder="Your Name" className="border-b-2 border-[#FFD504] bg-transparent text-2xl font-light outline-none text-white" />
-                    <input type='email' placeholder="Your Email" className="border-b-2 border-[#FFD504] bg-transparent text-2xl font-light outline-none text-white" />
-                    <input type='text' placeholder="Your Message" className="border-b-2 border-[#FFD504] bg-transparent text-2xl font-light outline-none text-white" />
+                    <input type='text' placeholder="Your Name" className="border-b-2 border-[#FFE812] bg-transparent text-2xl font-light outline-none text-white" />
+                    <input type='email' placeholder="Your Email" className="border-b-2 border-[#FFE812] bg-transparent text-2xl font-light outline-none text-white" />
+                    <input type='text' placeholder="Your Message" className="border-b-2 border-[#FFE812] bg-transparent text-2xl font-light outline-none text-white" />
                 </div>
             </div>
             <div className="flex xl:flex-row flex-col-reverse gap-y-10 px-10 md:px-32 justify-between z-20 gap-x-32">
@@ -59,7 +60,7 @@ const Footer = () => {
                             Sign Up
                         </div>
                     </div>
-                    <div className="h-[1px] w-full bg-[#FFD504] rounded-full"></div>
+                    <div className="h-[1px] w-full bg-[#FFE812] rounded-full"></div>
                 </div>
             </div>
         </div>
@@ -72,18 +73,22 @@ const navigation = [
     {
         main : 'Portfolio',
         subMenu : ['Weddings',' Commercials', 'Music Videos'],
+        link : '/portfolio'
     },
     {
         main : 'Testimonials',
         subMenu : ['Weddings',' Commercials', 'Music Videos'],
+        link : '/testimonials'
     },
     {
-        main : 'Get in Touch',
+        main : 'Get Quote',
         subMenu : ['Weddings',' Commercials', 'Music Videos'],
+        link : '/quote'
     },
     {
         main : 'Book Us',
         subMenu : ['Weddings',' Commercials', 'Music Videos'],
+        link : '/book-us'
     },
 ]
 
@@ -100,7 +105,7 @@ const NavigationElement = ({id} : NavigationElementProps) => {
         console.log(portfolioState.value)
     }
     return (
-        <div className="flex flex-col gap-2">
+        <div role="button" onClick={() => {router.push(navigation[id].link)}} className="flex flex-col gap-2">
             <h2 className="font-bold text-xl">{navigation[id].main}</h2>
             <div className="h-[1px] w-full bg-[#FFD504] rounded-full"></div>
             {/* <div className="flex flex-col gap-5">

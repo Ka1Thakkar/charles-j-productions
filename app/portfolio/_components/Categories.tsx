@@ -17,19 +17,19 @@ const Categories = () => {
     const portfolioState = usePortfolioState()
     return (
         <div className="min-h-screen flex flex-col py-40 px-10 md:px-32 gap-20">
-            <h1 className={headingFont.className + " text-8xl text-[#FFD504] font-medium"}>
+            <h1 className={headingFont.className + " text-8xl text-[#FFE812] font-medium"}>
                 Portfolio
             </h1>
-            <div className={subheadingFont.className + " text-[#FFD504]"}>
+            <div className={subheadingFont.className + " text-[#FFE812]"}>
             <Tabs defaultValue='Weddings' className="w-full">
                 <TabsList className="bg-transparent text-white/50">
-                    <TabsTrigger value="Weddings" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFD504] data-[state=active]:border-b-2 data-[state=active]:border-[#FFD504] rounded-none border-b-2 border-white/50 md:text-lg">
+                    <TabsTrigger value="Weddings" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
                         Weddings
                     </TabsTrigger>
-                    <TabsTrigger value="Commercials" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFD504] data-[state=active]:border-b-2 data-[state=active]:border-[#FFD504] rounded-none border-b-2 border-white/50 md:text-lg">
+                    <TabsTrigger value="Commercials" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
                         Commercials
                     </TabsTrigger>
-                    <TabsTrigger value="Music Videos" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFD504] data-[state=active]:border-b-2 data-[state=active]:border-[#FFD504] rounded-none border-b-2 border-white/50 md:text-lg">
+                    <TabsTrigger value="Music Videos" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
                         Music Videos
                     </TabsTrigger>
                 </TabsList>

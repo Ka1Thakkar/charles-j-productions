@@ -9,11 +9,11 @@ const subheadingFont = localFont({src : '../../public/Fonts/Satoshi-Font/Satoshi
 
 const Services = () => {
     return (
-        <div className={subheadingFont.className + " min-h-screen items-center gap-40 py-20 text-[#FFD504]"}>
+        <div className={subheadingFont.className + " min-h-screen items-center gap-40 py-20 text-[#FFE812]"}>
             {/* <Image src={services} alt="services text" className="h-[15vh] object-contain w-fit" /> */}
             <div className="md:px-32 px-10">
                 <h1 className="text-4xl font-bold pb-5">Our Services</h1>
-                <div className="h-[2px] w-full bg-[#FFD504]/30"></div>
+                <div className="h-[2px] w-full bg-[#FFE812]/30"></div>
                 <div className="flex flex-col gap-20 xl:gap-10 py-20">
                     {serivces.map((service, id) => {
                         return (
@@ -21,7 +21,7 @@ const Services = () => {
                         )
                     })}
                 </div>
-                <div className="h-[2px] w-full bg-[#FFD504]/30"></div>
+                <div className="h-[2px] w-full bg-[#FFE812]/30"></div>
             </div>
         </div>
     );
@@ -63,10 +63,10 @@ interface ServiceElementProps {
 const ServiceElement = ({position, object} : ServiceElementProps) => {
     position += 1
     return (
-        <div className="flex flex-col xl:flex-row justify-between gap-5 xl:gap-0">
-            <p className="xl:w-2/12 xl:text-xl text-4xl font-extrabold xl:font-normal">{'0' + position.toString()}</p>
-            <h1 className="xl:w-4/12 text-3xl font-bold uppercase">{object.service}</h1>
-            <p className="text-white xl:w-6/12 text-xl font-light">{object.description}</p>
+        <div className="flex transition-all ease-in-out flex-col xl:flex-row justify-between gap-5 xl:gap-0">
+            <p className="xl:w-2/12 xl:text-xl text-4xl font-extrabold xl:font-normal transition-all ease-in-out">{'0' + position.toString()}</p>
+            <h1 className="xl:w-4/12 text-3xl font-bold uppercase transition-all ease-in-out">{object.service}</h1>
+            <p className="text-white xl:w-6/12 text-xl font-light transition-all ease-in-out">{object.description}</p>
         </div>
     );
 }

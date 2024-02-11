@@ -9,9 +9,9 @@ const subheadingFont = localFont({src : '../../public/Fonts/Satoshi-Font/Satoshi
 
 const FAQs = () => {
     return (
-        <div className={subheadingFont.className + ' flex flex-col items-center justify-center min-h-screen px-10 md:px-32 py-20 text-[#FFD504]'}>
-            <h1 className={headingFont.className + ' xl:pb-20 pb-10 text-8xl font-medium'}>FAQs</h1>
-            <div className={subheadingFont.className + ' flex xl:flex-row flex-col items-start gap-20'}>
+        <div className={subheadingFont.className + ' flex flex-col items-center justify-center min-h-screen px-10 md:px-32 py-20 text-[#FFE812] transition-all ease-in-out'}>
+            <h1 className={headingFont.className + ' xl:pb-20 pb-10 text-8xl font-medium transition-all ease-in-out'}>FAQs</h1>
+            <div className={subheadingFont.className + ' flex xl:flex-row flex-col items-center xl:items-start gap-20 transition-all ease-in-out'}>
                 <Image src={image} alt='FAQs image' className='xl:w-4/12' />
                 <div>
                     <h1 className='text-4xl font-bold pb-10'>Lorem ipsum dolor sit amet, consectetur ?</h1>
@@ -31,25 +31,25 @@ export default FAQs;
 const AccordianElement = () => {
     return (
         <Accordion type="single" collapsible className='flex flex-col gap-5'>
-            <AccordionItem value="item-1" className='border-[#FFD504]/50'>
+            <AccordionItem value="item-1" className='border-[#FFE812]/50'>
                 <AccordionTrigger className='text-2xl font-semibold'>Lorem ipsum dolor sit amet, consectetur ?</AccordionTrigger>
                 <AccordionContent className='text-white text-xl font-light'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. 
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2" className='border-[#FFD504]/50'>
+            <AccordionItem value="item-2" className='border-[#FFE812]/50'>
                 <AccordionTrigger className='text-2xl font-semibold'>Lorem ipsum dolor sit amet, consectetur ?</AccordionTrigger>
                 <AccordionContent className='text-white text-xl font-light'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. 
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3" className='border-[#FFD504]/50'>
+            <AccordionItem value="item-3" className='border-[#FFE812]/50'>
                 <AccordionTrigger className='text-2xl font-semibold'>Lorem ipsum dolor sit amet, consectetur ?</AccordionTrigger>
                 <AccordionContent className='text-white text-xl font-light'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. 
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4" className='border-[#FFD504]/50'>
+            <AccordionItem value="item-4" className='border-[#FFE812]/50'>
                 <AccordionTrigger className='text-2xl font-semibold'>Lorem ipsum dolor sit amet, consectetur ?</AccordionTrigger>
                 <AccordionContent className='text-white text-xl font-light'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. 

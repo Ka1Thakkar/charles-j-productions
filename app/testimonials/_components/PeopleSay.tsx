@@ -13,7 +13,7 @@ const subheadingFont = localFont({src : '../../../public/Fonts/Satoshi-Font/Sato
 
 const PeopleSay = () => {
     return (
-        <div className={subheadingFont.className + " flex flex-col justify-center gap-20 md:px-32 px-10 text-[#FFD504] pt-40"}>
+        <div className={subheadingFont.className + " flex flex-col justify-center gap-20 md:px-32 px-10 text-[#FFE812] pt-40"}>
             <h1 className={headingFont.className + " text-8xl font-medium"}>
                 What People Say
             </h1>
