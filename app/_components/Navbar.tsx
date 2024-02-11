@@ -31,11 +31,11 @@ const Navbar = ({progress} : NavbarProps) => {
                     <source type='video/mp4' src={'/aassets/Rotating Website Logo.mp4'}></source>
                 </video>
             </div>
-            <div className="md:flex items-center gap-5 font-bold hidden pr-10 z-50 transition-all ease-in-out">
-                <Link href={'/portfolio'}><p className=" uppercase">portfolio</p></Link>
-                <Link href={'/testimonials'}><p className=" uppercase">testimonials/ clients</p></Link>
+            <div className={headingFont.className + " md:flex items-center gap-5 font-thin hidden pr-10 z-50 transition-all text-3xl ease-in-out"}>
+                <Link href={'/book-us'}><p className=" uppercase">Books Us</p></Link>
                 <Link href={'/quote'}><p className=" uppercase">Get Quote</p></Link>
-                <Link href={'/books-us'}><p className=" uppercase">Books Us</p></Link>
+                <Link href={'/testimonials'}><p className=" uppercase">testimonials/ clients</p></Link>
+                <Link href={'/portfolio'}><p className=" uppercase">portfolio</p></Link>
             </div>
         </motion.nav>
     );
