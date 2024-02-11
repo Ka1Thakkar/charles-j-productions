@@ -25,9 +25,9 @@ export default function Home() {
     requestAnimationFrame(raf)
   })
   useEffect(() => {
-    setTimeout(() => {
+    document.getElementById('loading')?.addEventListener('ended', () => {
       setIsLoading(false)
-    }, 6000)
+    })
   })
   const {scrollYProgress} = useScroll()
   const ref = useRef<HTMLElement>(null)
@@ -36,7 +36,7 @@ export default function Home() {
     <AnimatePresence>
       {isLoading && (
         <motion.main initial={{opacity: 1}} animate={{opacity:1}} exit={{opacity: 0}} transition={{duration : 1, delay: 0, ease : 'easeInOut'}} className="w-full min-h-screen flex flex-col items-center justify-center bg-black">
-          <video autoPlay muted preload='auto' className="h-[30vh] object-contain object-center absolute">
+          <video id="loading" autoPlay muted playsInline preload='auto' className="h-[30vh] object-contain object-center absolute">
             <source type="video/mp4" src="/aassets/Loading Logos 2 (faster).mp4" ></source>
           </video>
         </motion.main>

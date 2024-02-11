@@ -27,7 +27,7 @@ const Navbar = ({progress} : NavbarProps) => {
         <motion.nav className={subheadingFont.className + " fixed top-0 z-[999] w-full text-[#FFE812] flex justify-between py-2 overflow-hidden"}>
             <motion.div style={{opacity: opacity}} className="absolute w-full h-full bg-[#191416] top-0"></motion.div>
             <div role="button" onClick={() => router.push('/')} className="w-fit z-50 pl-5 md:pl-10">
-                <video autoPlay muted preload="none" loop height={'100px'}  className=" object-contain h-[50px] md:h-[60px] w-fit">
+                <video playsInline autoPlay muted preload="none" loop height={'100px'}  className=" object-contain h-[50px] md:h-[60px] w-fit">
                     <source type='video/mp4' src={'/aassets/Rotating Website Logo.mp4'}></source>
                 </video>
             </div>
