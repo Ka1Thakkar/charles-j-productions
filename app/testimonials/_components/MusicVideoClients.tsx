@@ -19,7 +19,7 @@ const MusicVideoClients = () => {
                 <CarouselContent>
                     {commercialClients.map((client, key) => {
                         return (
-                            <CarouselItem className=" pl-5 pr-5 md:basis-1/2 flex flex-col items-center justify-center">
+                            <CarouselItem key={key} className=" pl-5 pr-5 md:basis-1/2 flex flex-col items-center justify-center">
                                 <div className="relative w-fit overflow-hidden rounded-3xl">
                                     <Image priority src={client.image} alt="client image" className=" h-[50vh] object-cover object-top" />
                                     <div className="absolute w-full h-full bg-[#FFE812]/20 top-0" />

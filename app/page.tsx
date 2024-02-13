@@ -13,7 +13,7 @@ import Navbar from "./_components/Navbar";
 import { AnimatePresence, useScroll, motion } from "framer-motion";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   useEffect(() => {
     const lenis = new Lenis()
 
@@ -33,7 +33,7 @@ export default function Home() {
   const ref = useRef<HTMLElement>(null)
   return (
     <>
-    <AnimatePresence>
+    {/* <AnimatePresence>
       {isLoading && (
         <motion.main initial={{opacity: 1}} animate={{opacity:1}} exit={{opacity: 0}} transition={{duration : 1, delay: 0, ease : 'easeInOut'}} className="w-full min-h-screen flex flex-col items-center justify-center bg-black">
           <video id="loading" autoPlay muted playsInline preload='auto' className="h-[30vh] object-contain object-center absolute">
@@ -41,7 +41,7 @@ export default function Home() {
           </video>
         </motion.main>
       )}
-    </AnimatePresence>
+    </AnimatePresence> */}
     <AnimatePresence>
       {!isLoading && (
         <motion.main initial={{opacity: 0, backgroundColor: 'black'}} animate={{opacity: 1, backgroundColor : 'transparent'}} transition={{delay: 0, duration: 1.5, ease: 'easeInOut'}} ref={ref} className=" w-full min-h-screen">
