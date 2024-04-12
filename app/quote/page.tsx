@@ -5,6 +5,7 @@ import Form from './_components/Form'
 import { useEffect, useRef } from 'react';
 import Footer from '@/components/Footer';
 import Lenis from '@studio-freight/lenis';
+import Contract from './_components/Contract';
 
 const Quote = () => {
     useEffect(() => {
@@ -23,6 +24,7 @@ const Quote = () => {
         <main ref={ref}>
             <Navbar progress={scrollYProgress} />
             <Form />
+            <Contract />
             <Footer />
         </main>
     );

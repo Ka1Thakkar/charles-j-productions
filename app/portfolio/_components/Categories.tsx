@@ -3,11 +3,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import localFont from "next/font/local";
 import weddings from './data/weddings'
 import commercials from './data/commercials'
-import musicVideos from './data/musciVideos'
+import musicVideos from './data/musicVideos'
 import Image from "next/image";
 import { usePortfolioState } from "@/hooks/portfolio-state";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 const headingFont = localFont({src : '../../../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
 
@@ -16,7 +17,7 @@ const subheadingFont = localFont({src : '../../../public/Fonts/Satoshi-Font/Sato
 const Categories = () => {
     const portfolioState = usePortfolioState()
     return (
-        <div className="min-h-screen flex flex-col py-40 px-10 md:px-32 gap-20">
+        <div className="min-h-screen flex flex-col pt-40 pb-20 px-10 md:px-32 gap-20">
             <h1 className={headingFont.className + " text-8xl text-[#FFE812] font-medium"}>
                 Portfolio
             </h1>
@@ -87,8 +88,12 @@ const WeddingsElement = () => {
         <div className="flex flex-col gap-10 justify-center items-center pt-10 relative">
             {weddings.map((element, key) => {
                 return (
-                    <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
-                        <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[50vh] object-cover" />
+                    <div key={key}>
+                        <Link href={element.link}>
+                            <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
+                                <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[60vh] object-cover" />
+                            </div>
+                        </Link>
                     </div>
                 )
             })}
@@ -102,13 +107,13 @@ const CommercialsElement = () => {
             {commercials.map((element, key) => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
-                        <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[50vh] object-cover object-center" />
-                        <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[50%] lg:items-end py-5">
+                        <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[60vh] object-cover object-center" />
+                        <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[25%] lg:items-end py-5">
                             <p className="text-xl font-bold">
-                                Title
+                                {element.title}
                             </p>
                             <p className="text-lg">
-                                Artist
+                                {element.industry}
                             </p>
                         </div>
                     </div>
@@ -127,10 +132,10 @@ const MusicVideosElement = () => {
                         <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[50vh] object-cover" />
                         <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[50%] lg:items-end py-5">
                             <p className="text-xl font-bold">
-                                Title
+                                {element.songName}
                             </p>
                             <p className="text-lg">
-                                Industry
+                                {element.artists}
                             </p>
                         </div>
                     </div>

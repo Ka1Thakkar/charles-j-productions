@@ -21,12 +21,12 @@ const PeopleSay = () => {
                 <CarouselContent>
                     {clients.map((client, key) => {
                         return (
-                            <CarouselItem key={key} className="flex flex-col xl:flex-row xl:justify-center justify-start items-center xl:items-center gap-10 xl:basis-1/2">
-                                <div className="relative w-fit overflow-hidden rounded-3xl">
-                                    <Image priority src={client.image} alt="client image" className=" h-[50vh] object-cover object-top" />
+                            <CarouselItem key={key} className="flex flex-col lg:flex-row xl:justify-center justify-start items-center xl:items-center gap-10 xl:basis-8/12">
+                                <div className="relative overflow-hidden rounded-3xl xl:w-5/12 lg:w-5/12 w-full">
+                                    <Image priority src={client.image} alt="client image" className=" h-[50vh] object-cover object-top w-full" />
                                     {/* <div className="absolute w-full h-full bg-[#FFD504]/10 top-0" /> */}
                                 </div>
-                                <div className="xl:w-6/12">
+                                <div className="xl:w-6/12 lg:w-6/12">
                                     <p className="text-3xl font-bold pb-10">
                                         {client.name}
                                     </p>

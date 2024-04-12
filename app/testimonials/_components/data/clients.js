@@ -1,25 +1,18 @@
-import image3 from '@/public/Clients/3.png'
-import image2 from '@/public/Clients/2.png'
-import image1 from '@/public/Clients/1.png'
+import image2 from '@/public/Clients/Client 2 (Noetic J) Artist - Music Video.jpg'
+import image1 from '@/public/Clients/Client 1 (Byrd Hype) Artist - Music Video.jpg'
 
 const clients = [
     {
         image: image1,
-        name : 'Client Name',
-        description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. Fusce placerat, nunc quis dictum venenatis, sem lectus malesuada libero,',
-        services : ['wedding photography']
+        name : 'Byrd Hype',
+        description : 'Working with Charles J. Films Productions was nothing less than wonderful. Throughout the whole process of working with the production, the director was very patient and understanding. The overall product was way more than I actually imagined and expected. I would highly recommend anyone who is interested in having a video done very professionally. Thank you for sharing your time and very valuable talent with me.',
+        services : ['Music Video']
     },
     {
         image: image2,
-        name : 'Client Name',
-        description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. Fusce placerat, nunc quis dictum venenatis, sem lectus malesuada libero,',
-        services : ['wedding photography']
-    },
-    {
-        image: image3,
-        name : 'Client Name',
-        description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus vitae tortor ut mollis. Cras semper, sem in consequat facilisis, risus quam tincidunt ante, sit amet accumsan velit urna quis ex. Sed feugiat orci dui, eget rhoncus massa accumsan eu. Fusce placerat, nuc quis dictum venenatis, sem lectus malesuada libero,',
-        services : ['wedding photography']
+        name : 'Noetic J',
+        description : "I've had the privilege of working with Charles J. Films Productions, Charles Adams is truly an exceptional cinematographer. On multiple music videos, I am continually amazed by their talent and dedication. They possess an unparalleled attention to detail, meticulously crafting each shot to perfection. What truly sets them apart is their ability to, even the most modest of resources, create captivating masterpieces, showcasing their ingenuity and creative vision. Their expertise in post-production elevates the visuals to a professional standard, imbuing them with richness and depth.",
+        services : ['Music Video']
     },
 ]
 

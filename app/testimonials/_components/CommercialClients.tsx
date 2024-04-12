@@ -15,17 +15,17 @@ const CommercialClients = () => {
                     Commercial Clients
                 </h1>
             </div>
-            <Carousel className="px-2 xl:w-7/12">
+            <Carousel className="xl:w-7/12">
                 <CarouselContent>
                     {commercialClients.map((client, key) => {
                         return (
-                            <CarouselItem key={key} className=" pl-5 pr-5 md:basis-1/2 flex flex-col items-center justify-center">
+                            <CarouselItem key={key} className=" pl-5 md:basis-9/12 flex flex-col items-center justify-center">
                                 <div className="relative w-fit overflow-hidden rounded-3xl">
-                                    <Image priority src={client.image} alt="client image" className=" h-[50vh] object-cover object-top" />
+                                    <Image priority src={client.image} alt="client image" className=" md:h-[55vh] object-cover object-top h-[40vh]" />
                                     <div className="absolute w-full h-full bg-[#FFE812]/20 top-0" />
-                                    <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
+                                    {/* <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
                                         <Image priority src={client.logo} alt="client logo" className=" w-[150px] h-[150px] object-cover" />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </CarouselItem>
                         )

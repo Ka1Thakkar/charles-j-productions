@@ -1,6 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Image from "next/image";
-import commercialClients from './data/commercialClients'
+import musicVideoClients from './data/musicVideoClients'
 import localFont from "next/font/local";
 
 const headingFont = localFont({src : '../../../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
@@ -11,21 +11,21 @@ const MusicVideoClients = () => {
     return (
         <div className="lg:px-32 md:px-16 px-10 flex flex-col xl:flex-row-reverse text-[#FFE812] gap-20 items-center pt-40">
             <div className="xl:w-5/12">
-                <h1 className={headingFont.className + " text-8xl font-medium"}>
+                <h1 className={headingFont.className + " text-8xl font-medium xl:text-right"}>
                     Music Video Clients
                 </h1>
             </div>
             <Carousel className="px-2 xl:w-7/12">
                 <CarouselContent>
-                    {commercialClients.map((client, key) => {
+                    {musicVideoClients.map((client, key) => {
                         return (
-                            <CarouselItem key={key} className=" pl-5 pr-5 md:basis-1/2 flex flex-col items-center justify-center">
+                            <CarouselItem key={key} className=" pl-5 md:basis-9/12 flex flex-col items-center justify-center">
                                 <div className="relative w-fit overflow-hidden rounded-3xl">
-                                    <Image priority src={client.image} alt="client image" className=" h-[50vh] object-cover object-top" />
+                                    <Image priority src={client.image} alt="client image" className=" md:h-[55vh] object-cover object-top h-[40vh]" />
                                     <div className="absolute w-full h-full bg-[#FFE812]/20 top-0" />
-                                    <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
+                                    {/* <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
                                         <Image priority src={client.logo} alt="client logo" className=" w-[150px] h-[150px] object-cover" />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </CarouselItem>
                         )

@@ -1,21 +1,16 @@
-import wedding1 from '@/public/weddings/1.png'
-import wedding2 from '@/public/weddings/2.png'
-import wedding3 from '@/public/weddings/3.png'
-import wedding4 from '@/public/weddings/4.png'
+import wedding1 from '@/public/weddings/Dom and Abby Thumbnail 2.png'
+import wedding2 from '@/public/weddings/Delia and Kieth Thumbnail 2.png'
+
 
 
 const weddings = [
     {
         image : wedding1,
+        link : "https://vimeo.com/932980438?share=copy"
     },
     {
         image : wedding2,
-    },
-    {
-        image : wedding3,
-    },
-    {
-        image : wedding4,
+        link : "https://vimeo.com/932978086?share=copy"
     },
 ]
 

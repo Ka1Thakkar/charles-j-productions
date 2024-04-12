@@ -71,24 +71,24 @@ export default Footer;
 
 const navigation = [
     {
+        main : 'Book Us',
+        link : '/book-us'
+    },
+    {
+        main : 'Get Quote',
+        link : '/quote'
+    },
+    {
         main : 'Portfolio',
-        subMenu : ['Weddings',' Commercials', 'Music Videos'],
+        link : '/portfolio'
+    },
+    {
+        main : 'About Us',
         link : '/portfolio'
     },
     {
         main : 'Testimonials',
-        subMenu : ['Weddings',' Commercials', 'Music Videos'],
         link : '/testimonials'
-    },
-    {
-        main : 'Get Quote',
-        subMenu : ['Weddings',' Commercials', 'Music Videos'],
-        link : '/quote'
-    },
-    {
-        main : 'Book Us',
-        subMenu : ['Weddings',' Commercials', 'Music Videos'],
-        link : '/book-us'
     },
 ]
 
