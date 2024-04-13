@@ -21,12 +21,12 @@ const Footer = () => {
             <h1 className={headingFont.className + " text-8xl font-medium px-10 md:px-32 pb-10"}>Let's work together</h1>
             <div className="flex flex-col xl:flex-row px-10 md:px-32 z-30 gap-20 pb-20">
                 <div className="xl:w-1/2 flex flex-col gap-10">
-                    <p className="text-white text-3xl font-light">
+                    <p className="text-white text-xl md:text-3xl font-light">
                     Tell us a little about your project! We will get back to you as soon as we can with some ideas of how we can make your project shine.
                     </p>
-                    <div className="text-white font-semibold text-3xl flex flex-col gap-2">
+                    <div className="text-white font-semibold text-xl md:text-3xl flex flex-col gap-2">
                         Write to Us
-                        <p className="font-light text-2xl">
+                        <p className="font-light text-lg md:text-2xl">
                             email@gmail.com
                         </p>
                     </div>
@@ -38,10 +38,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="xl:w-1/2 flex flex-col gap-10">
-                    <h2 className="text-3xl">Send Us a Message</h2>
-                    <input type='text' placeholder="Your Name" className="border-b-2 border-[#FFE812] bg-transparent text-2xl font-light outline-none text-white" />
-                    <input type='email' placeholder="Your Email" className="border-b-2 border-[#FFE812] bg-transparent text-2xl font-light outline-none text-white" />
-                    <input type='text' placeholder="Your Message" className="border-b-2 border-[#FFE812] bg-transparent text-2xl font-light outline-none text-white" />
+                    <h2 className="md:text-3xl text-xl font-bold">Send Us a Message</h2>
+                    <input type='text' placeholder="Your Name" className="border-b-2 border-[#FFE812] bg-transparent md:text-2xl text-lg font-light outline-none text-white" />
+                    <input type='email' placeholder="Your Email" className="border-b-2 border-[#FFE812] bg-transparent md:text-2xl text-lg font-light outline-none text-white" />
+                    <input type='text' placeholder="Your Message" className="border-b-2 border-[#FFE812] bg-transparent md:text-2xl text-lg font-light outline-none text-white" />
                 </div>
             </div>
             <div className="flex xl:flex-row flex-col-reverse gap-y-10 px-10 md:px-32 justify-between z-20 gap-x-32">
@@ -56,7 +56,7 @@ const Footer = () => {
                     <h2 className="font-bold text-xl pb-5">Subscribe</h2>
                     <div className=" flex justify-between pb-2 gap-5">
                         <input type='email' placeholder="Enter your Email" className="bg-transparent text-lg font-light outline-none max text-white w-6/12" />
-                        <div role="button" className="font-bold text-white text-xl">
+                        <div role="button" className="font-bold text-white text-lg">
                             Sign Up
                         </div>
                     </div>

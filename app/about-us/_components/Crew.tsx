@@ -15,7 +15,7 @@ const Crew = () => {
                 return (
                     <div key={id} className={cn('flex gap-20 items-center flex-col', id%2 === 0 ? " lg:flex-row" : "lg:flex-row-reverse")}>
                         <div className="relative overflow-hidden rounded-3xl xl:w-5/12 lg:w-5/12 w-full">
-                            <Image priority src={member.image} alt="client image" className=" h-[75vh] object-cover object-center w-full" />
+                            <Image priority src={member.image} alt="client image" className="h-[50vh] lg:h-[75vh] object-cover object-center w-full" />
                             {/* <div className="absolute w-full h-full bg-[#FFD504]/10 top-0" /> */}
                         </div>
                         <div className="xl:w-6/12 lg:w-6/12">

@@ -99,11 +99,11 @@ const CommercialsElement = () => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
                         <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[60vh] object-cover object-center" />
-                        <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[25%] lg:items-end py-5">
-                            <p className="text-xl font-bold">
+                        <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-5 bg-gradient-to-t from-[#191416] to-transparent h-[25%] lg:items-end py-5">
+                            <p className="xl:text-xl text-lg font-bold">
                                 {element.title}
                             </p>
-                            <p className="text-lg">
+                            <p className="xl:text-lg">
                                 {element.industry}
                             </p>
                         </div>
@@ -121,11 +121,11 @@ const MusicVideosElement = () => {
                 return (
                     <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
                         <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[50vh] object-cover" />
-                        <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-10 bg-gradient-to-t from-[#191416]/90 to-transparent h-[50%] lg:items-end py-5">
-                            <p className="text-xl font-bold">
+                        <div className="absolute bottom-0 flex lg:flex-row flex-col w-full justify-end lg:justify-between px-5 bg-gradient-to-t from-[#191416] to-transparent h-[50%] lg:items-end py-5">
+                            <p className="xl:text-xl text-lg font-bold">
                                 {element.songName}
                             </p>
-                            <p className="text-lg">
+                            <p className="xl:text-lg">
                                 {element.artists}
                             </p>
                         </div>

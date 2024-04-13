@@ -9,7 +9,7 @@ const Contract = () => {
     return (
         <div className="md:px-32 px-10 relative py-20 text-[#FFE812]">
             <h1 className={headingFont.className + " text-8xl font-medium mb-5"}>Happy with the Quotation?</h1>
-            <p className="text-white text-3xl font-light mb-10">
+            <p className="text-white text-xl md:text-3xl font-light mb-10">
                 Sign the Contract and let's start working on your project!
             </p>
             <Link href={'/contract'}>

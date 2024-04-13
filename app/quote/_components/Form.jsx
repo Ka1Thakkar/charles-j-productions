@@ -8,7 +8,7 @@ const subheadingFont = localFont({ src: '../../../public/Fonts/Satoshi-Font/Sato
 
 const Form = () => {
     return (
-        <div className="md:px-32 px-10 relative py-40 text-[#FFE812]">
+        <div className="md:px-32 px-5 relative py-40 text-[#FFE812]">
             <div className="pb-20">
                 <h1 className={headingFont.className + " text-8xl font-medium"}>Get an Estimated Quote</h1>
             </div>
