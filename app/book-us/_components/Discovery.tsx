@@ -17,13 +17,13 @@ const DiscoveryMeeting = () => {
                 </p>
                 <div className="flex gap-5 items-center">
                     <Link href={'/quote'}>
-                    <div role="button" className="text-black text-lg font-semibold bg-[#FFE812] py-2 px-5 rounded-full">
+                    <div role="button" className="text-black lg:text-xl font-bold bg-[#FFE812] py-2 px-5 rounded-full">
                         Get Quote
                     </div>
                     </Link>
                     <Link href={'/contract'}>
-                    <div role="button" className="text-lg font-semibold py-2 px-5">
-                        Sign Contract
+                    <div role="button" className="lg:text-xl font-bold py-2 px-5">
+                        Contract
                     </div>
                     </Link>
                 </div>

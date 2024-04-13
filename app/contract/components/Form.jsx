@@ -10,7 +10,7 @@ const Form = () => {
     return (
         <div className="md:px-32 px-10 relative py-40 text-[#FFE812]">
             <div className="pb-20">
-                <h1 className={headingFont.className + " text-8xl font-medium"}>Sign a Contract</h1>
+                <h1 className={headingFont.className + " text-8xl font-medium"}>Contract</h1>
             </div>
             <Tabs defaultValue='Weddings' className="w-full">
                 <TabsList className="bg-transparent text-white/50">

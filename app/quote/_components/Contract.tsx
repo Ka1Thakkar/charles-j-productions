@@ -13,8 +13,8 @@ const Contract = () => {
                 Sign the Contract and let's start working on your project!
             </p>
             <Link href={'/contract'}>
-                <div role="button" className="text-black text-lg font-semibold bg-[#FFE812] py-2 px-5 rounded-full w-fit">
-                    Sign Contract
+                <div role="button" className="text-black lg:text-xl font-bold bg-[#FFE812] py-2 px-5 rounded-full w-fit">
+                    Contract
                 </div>
             </Link>
         </div>

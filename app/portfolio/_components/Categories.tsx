@@ -7,12 +7,14 @@ import musicVideos from './data/musicVideos'
 import Image from "next/image";
 import { usePortfolioState } from "@/hooks/portfolio-state";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import VideoPlayer from '@/components/VideoPlayer'
 
-const headingFont = localFont({src : '../../../public/Fonts/Nirvana-Font/NIRVANA.woff2'})
 
-const subheadingFont = localFont({src : '../../../public/Fonts/Satoshi-Font/Satoshi-Variable.woff2'})
+const headingFont = localFont({ src: '../../../public/Fonts/Nirvana-Font/NIRVANA.woff2' })
+
+const subheadingFont = localFont({ src: '../../../public/Fonts/Satoshi-Font/Satoshi-Variable.woff2' })
 
 const Categories = () => {
     const portfolioState = usePortfolioState()
@@ -22,22 +24,22 @@ const Categories = () => {
                 Portfolio
             </h1>
             <div className={subheadingFont.className + " text-[#FFE812]"}>
-            <Tabs defaultValue='Weddings' className="w-full">
-                <TabsList className="bg-transparent text-white/50">
-                    <TabsTrigger value="Weddings" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
-                        Weddings
-                    </TabsTrigger>
-                    <TabsTrigger value="Commercials" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
-                        Commercials
-                    </TabsTrigger>
-                    <TabsTrigger value="Music Videos" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
-                        Music Videos
-                    </TabsTrigger>
-                </TabsList>
-                <TabsContent value="Weddings"><WeddingsElement /></TabsContent>
-                <TabsContent value="Commercials"><CommercialsElement /></TabsContent>
-                <TabsContent value="Music Videos"><MusicVideosElement /></TabsContent>
-                {/* <TabsList className="bg-transparent text-white/50">
+                <Tabs defaultValue='Weddings' className="w-full">
+                    <TabsList className="bg-transparent text-white/50">
+                        <TabsTrigger value="Weddings" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
+                            Weddings
+                        </TabsTrigger>
+                        <TabsTrigger value="Commercials" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
+                            Commercials
+                        </TabsTrigger>
+                        <TabsTrigger value="Music Videos" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFE812] data-[state=active]:border-b-2 data-[state=active]:border-[#FFE812] rounded-none border-b-2 border-white/50 md:text-lg">
+                            Music Videos
+                        </TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="Weddings"><WeddingsElement /></TabsContent>
+                    <TabsContent value="Commercials"><CommercialsElement /></TabsContent>
+                    <TabsContent value="Music Videos"><MusicVideosElement /></TabsContent>
+                    {/* <TabsList className="bg-transparent text-white/50">
                     <TabsTrigger value="Weddings" className="data-[state=active]:bg-transparent data-[state=active]:text-[#FFD504] data-[state=active]:border-b-2 data-[state=active]:border-[#FFD504] rounded-none border-b-2 border-white/50 text-lg">
                         Weddings
                     </TabsTrigger>
@@ -54,46 +56,35 @@ const Categories = () => {
         </div>
     );
 }
- 
+
 export default Categories;
 
 const WeddingsElement = () => {
     const containerRef = useRef<HTMLDivElement>(null)
-    const {scrollYProgress} = useScroll({
-        target : containerRef,
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
         offset: ['start end', 'end end']
     })
     const containerProgress = scrollYProgress
+    const [hasWindow, setHasWindow] = useState(false);
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setHasWindow(true);
+        }
+    }, []);
     return (
-        // <div ref={containerRef} className="flex flex-col gap-10 justify-center items-center">
-        //     {weddings.map((element, key) => {
-        //         const imageRef = useRef<HTMLImageElement>(null)
-        //         const containerScale = useTransform(containerProgress, [(key/weddings.length),1], [1,(1 - (weddings.length - key)*0.05)])
-        //         const {scrollYProgress} = useScroll({
-        //             target : imageRef,
-        //             offset : ['start end', 'end end']
-        //         })
-        //         const imageScale = useTransform(scrollYProgress, [0,1], [1.5,1])
-        //         return (
-        //             <div  ref={imageRef} style={{top: `calc(${key}*30px)`}} className="h-screen flex flex-col items-center justify-center sticky">
-        //                 <motion.div style={{scale : containerScale}} className="h-[80%] w-[100%] overflow-hidden rounded-3xl">
-        //                     <motion.div style={{scale : imageScale}} className="h-full w-full">
-        //                         <Image  priority placeholder='blur' key={key} src={element.image} alt="wedding image" className=" object-cover h-full w-full" />
-        //                     </motion.div>
-        //                 </motion.div>
-        //             </div>
-        //         )
-        //     })}
-        // </div>
-        <div className="flex flex-col gap-10 justify-center items-center pt-10 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center pt-10 relative">
             {weddings.map((element, key) => {
                 return (
-                    <div key={key}>
-                        <Link href={element.link}>
+                    <div key={key} className="w-full">
+                        {/* <Link href={element.link}>
                             <div className="relative w-fit h-fit rounded-3xl overflow-hidden">
                                 <Image priority placeholder="blur" key={key} src={element.image} alt="wedding image" className=" h-[60vh] object-cover" />
                             </div>
-                        </Link>
+                        </Link> */}
+                        <iframe src={element.link} allowFullScreen allowTransparency loading="eager" referrerPolicy="strict-origin-when-cross-origin" className="w-[100%] h-[100%] outline-none border-none aspect-video rounded-xl" frameBorder={0}>
+                        </iframe>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
                 )
             })}
