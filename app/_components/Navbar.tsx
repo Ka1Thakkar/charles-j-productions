@@ -11,6 +11,7 @@ import { MotionValue, useTransform, motion, useMotionValue, useInView, cubicBezi
 import { useRef, useState } from "react";
 import { Github, Linkedin, Mails, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoGif from '@/public/aassets/Rotating Website Logo1.gif'
 
 const headingFont = localFont({ src: '../../public/Fonts/Nirvana-Font/NIRVANA.woff2' })
 
@@ -33,10 +34,11 @@ const Navbar = ({ progress }: NavbarProps) => {
     return (
         <motion.nav style={{ display: '-webkit-flex', WebkitJustifyContent: 'space-between' }} className={subheadingFont.className + " fixed top-0 z-[999] w-[100vw] text-[#FFE812] flex justify-between py-2 overflow-hidden items-center"}>
             <motion.div style={{ opacity: opacity }} className="absolute w-full h-full bg-[#191416] top-0"></motion.div>
-            <div role="button" onClick={() => router.push('/')} className="w-fit z-50 pl-5 md:pl-10">
-                <video playsInline autoPlay muted preload="none" loop height={'100px'} className=" object-contain h-[50px] md:h-[75px] w-fit">
+            <div role="button" onClick={() => router.push('/')} className="w-fit z-50 pl-5 md:pl-5">
+                {/* <video playsInline autoPlay muted preload="none" loop height={'100px'} className=" object-contain h-[60px] md:h-[75px] w-fit">
                     <source type='video/webm' src={'/aassets/RotatingWebsiteLogo1.webm'}></source>
-                </video>
+                </video> */}
+                <Image src={logoGif} alt="logo gif" quality={100} className=" object-contain h-[60px] md:h-[75px] w-fit" />
             </div>
             <div className={subheadingFont.className + " md:flex items-center gap-5 font-medium hidden pr-10 z-50 transition-all ease-in-out"}>
                 <Link href={'/book-us'}><p className=" uppercase">Books Us</p></Link>
